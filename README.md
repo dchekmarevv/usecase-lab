@@ -1,23 +1,27 @@
 # usecase-lab
 
-> You built the product. Now pick the use cases that actually land.
+> You built the product. Now figure out which story to lead with.
 
-Every founder and marketer hits this after shipping: your product has 60 possible use cases — hero demos, viral hooks, enterprise angles, integration stories — but your landing, LinkedIn, and X have room for 5. The 5 you pick don't just change your messaging; they tell you **where product and marketing should optimize next.**
+You have one product — maybe even one core use case. But you have **50 different ways to tell the story**: hero headlines, blog posts, X threads, LinkedIn posts, demo scripts, cold-email hooks, sales talking points, investor pitch angles. Each one is a different way to describe *the same thing you built*.
 
-`usecase-lab` is a Claude Code toolkit that turns your product into a scored, filterable, interactive prioritization page. It does two jobs:
+Your landing page needs one on top. Your first blog post needs another. Your viral tweet needs the one that actually spreads. Pick wrong — nobody "gets it", and you spend weeks A/B-testing copy that never should have shipped.
 
-1. **What goes on your landing today.** Score shipped use cases across 7 criteria; commit to the 5 that'll actually land — homepage hero, features section, LinkedIn posts, X threads.
-2. **What goes in your "what-if" section.** Tag unbuilt use cases as `FUTURE`, score them under the `AI era` preset that rewards differentiation and virality. Spot the angles worth *building toward* — so roadmap and marketing argue from the same page instead of running on parallel tracks.
+`usecase-lab` is a Claude Code toolkit that generates 30–60 story angles for your product, scores them across 7 criteria, and renders them as an interactive prioritization page. Two jobs:
+
+1. **Which angle goes on your landing today.** Score shipped angles, pick the 5 that'll actually land — hero headline, features grid, LinkedIn posts, X threads, cold-email subject lines.
+2. **Which angle belongs in your "what-if" section.** Tag unbuilt angles as `FUTURE`, score them under the `AI era` preset that rewards differentiation and virality. Spot the stories worth *building toward* — so roadmap and marketing argue from the same page instead of running on parallel tracks.
+
+> **Note:** In this repo, "use case" means *a way to describe what your product does* (a landing-page angle, a tweet hook, a demo script) — not a distinct customer problem. Even if your product solves one problem, you have dozens of angles to sell it.
 
 **You get:**
 - A grounded inventory of what your product actually does (not what your pitch deck claims)
-- 30–60 use case angles generated from that inventory, grouped by category, honestly horizon-tagged (NOW / NEXT / FUTURE)
+- 30–60 story angles generated from that inventory — hero headlines, viral hooks, comparison stories, audience wedges, integration narratives — each tagged NOW / NEXT / FUTURE
 - A scoring framework with 7 criteria and 7 opinionated weight presets (including the **AI era** preset that rewards virality and revenue over shippability)
 - An interactive HTML page with live weight sliders, filters, top-5 cards, CSV export — no backend, no CDN, no build step
 
 **Who this is for:**
-- **Founders post-ship.** You know what you built; you need to decide which angle goes on the homepage and where to optimize next.
-- **Marketers with too many options.** Every feature is a potential demo. Which 5 get the budget?
+- **Solo founders with one product, many ways to pitch it.** You're not prioritizing features — you're prioritizing *how to talk about* the one thing you already built.
+- **Marketers with too many drafts.** Every feature is a potential tweet, every sentence a candidate landing hero. Which 5 get the budget?
 - **Teams aligning product and marketing.** The scoring page is the shared source of truth — "what if we built X" becomes a scored angle instead of a vibes argument.
 
 ## Quick start
@@ -222,7 +226,7 @@ Issues tracked at https://github.com/dchekmarevv/usecase-lab/issues. Contributio
 
 ## Example
 
-[`examples/acme-notes-feature-ideas/`](examples/acme-notes-feature-ideas/) is a synthetic walkthrough for a fictional note-taking product ("Acme Notes"). 20 use cases, 7 criteria, 7 presets including AI era. Illustrative output showing what a real session produces.
+[`examples/acme-notes-landing-angles/`](examples/acme-notes-landing-angles/) is a synthetic walkthrough for a fictional note-taking product ("Acme Notes"). 28 story angles — hero headlines, migration wedges, trust signals, comparison hooks, "what-if" FUTURE angles — scored across 7 criteria, with 7 presets including AI era. Illustrative output showing what a real session produces.
 
 To regenerate the HTML from that example: copy `framework.json` and `scored.csv` into your own `docs/usecase-lab/<topic>/` folder, then run `/usecase-render <topic>`.
 
@@ -243,8 +247,11 @@ No backend. No telemetry. No account. Everything runs locally via Claude Code. T
 **Can I share the HTML?**
 It's a single self-contained file. Email it, drop it in Notion, serve it from a bucket, embed it via iframe. No dependencies to chase.
 
-**Can I score things other than product use cases?**
-Yes. The framework is product-agnostic. `/usecase-lab feature-ideas`, `/usecase-lab onboarding-flows`, `/usecase-lab enterprise-features` — anything you'd normally prioritize in a spreadsheet. Topic-specific category templates are in `/usecase-brainstorm` for common topics; anything else, it figures out from first principles.
+**What if my product only has one use case?**
+Perfect. That's the common case. You still have dozens of different ways to describe the one thing you built — hero headlines, tweets, blog posts, cold-email hooks, sales lines. usecase-lab generates and prioritizes those angles. The word "use case" here means "a way of using your product in messaging," not "a distinct customer problem."
+
+**Can I score things other than landing angles?**
+Yes. The framework is topic-agnostic. `/usecase-lab landing-angles`, `/usecase-lab cold-email-hooks`, `/usecase-lab viral-content`, `/usecase-lab investor-pitch`, `/usecase-lab onboarding-flows` — anything where you have many options and have to pick a few. Topic-specific category templates are in `/usecase-brainstorm` for common topics; anything else it figures out from first principles.
 
 **How do I update?**
 Re-run the install script. It overwrites the commands and template in place.

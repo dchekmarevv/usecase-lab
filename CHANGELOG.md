@@ -8,4 +8,4 @@ Initial public release.
 - Two future stubs: `/usecase-track`, `/usecase-retro`
 - Data-driven HTML renderer with live weight sliders, seven built-in presets (including `AI era`), filter chips, sortable table, CSV export
 - One-line installer (`install.sh`)
-- Synthetic example (`examples/acme-notes-feature-ideas/`) so new users can see a working output without running the pipeline first
+- Synthetic example (`examples/acme-notes-landing-angles/`) so new users can see a working output without running the pipeline first — 28 story angles for a fictional note-taking product
