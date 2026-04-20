@@ -1,26 +1,29 @@
 # usecase-lab
 
-> Ideas are cheap. Prioritization is the work.
+> You built the product. Now pick the use cases that actually land.
 
-In the AI era, shipping is easy. The bottleneck isn't writing code — it's figuring out **which of your 60 ideas around your product deserves the next two weeks**. And nobody wants to build that spreadsheet by hand.
+Every founder and marketer hits this after shipping: your product has 60 possible use cases — hero demos, viral hooks, enterprise angles, integration stories — but your landing, LinkedIn, and X have room for 5. The 5 you pick don't just change your messaging; they tell you **where product and marketing should optimize next.**
 
-`usecase-lab` is the spreadsheet replacement. A Claude Code toolkit that turns a rough product into a scored, filterable, interactive prioritization page — without leaving your terminal.
+`usecase-lab` is a Claude Code toolkit that turns your product into a scored, filterable, interactive prioritization page. It does two jobs:
+
+1. **What goes on your landing today.** Score shipped use cases across 7 criteria; commit to the 5 that'll actually land — homepage hero, features section, LinkedIn posts, X threads.
+2. **What goes in your "what-if" section.** Tag unbuilt use cases as `FUTURE`, score them under the `AI era` preset that rewards differentiation and virality. Spot the angles worth *building toward* — so roadmap and marketing argue from the same page instead of running on parallel tracks.
 
 **You get:**
 - A grounded inventory of what your product actually does (not what your pitch deck claims)
-- 30–60 use case ideas generated from that inventory, grouped by category, honestly horizon-tagged
+- 30–60 use case angles generated from that inventory, grouped by category, honestly horizon-tagged (NOW / NEXT / FUTURE)
 - A scoring framework with 7 criteria and 7 opinionated weight presets (including the **AI era** preset that rewards virality and revenue over shippability)
 - An interactive HTML page with live weight sliders, filters, top-5 cards, CSV export — no backend, no CDN, no build step
 
 **Who this is for:**
-- **Non-technical founders shipping with AI.** You know your product; you don't want to become a spreadsheet jockey to prioritize it.
-- **PMs and solo builders.** Turn "what should I work on?" into a scored list you can argue with.
-- **Teams who dogfood.** Point it at your own product, pass the HTML around, watch people disagree with your weights and propose their own.
+- **Founders post-ship.** You know what you built; you need to decide which angle goes on the homepage and where to optimize next.
+- **Marketers with too many options.** Every feature is a potential demo. Which 5 get the budget?
+- **Teams aligning product and marketing.** The scoring page is the shared source of truth — "what if we built X" becomes a scored angle instead of a vibes argument.
 
 ## Quick start
 
 1. Install (30 seconds — see below)
-2. Run `/usecase-lab feature-ideas` in your project
+2. Run `/usecase-lab landing-angles` in your project
 3. Watch it generate inventory → ideas → scoring → interactive HTML
 4. Drag the weight sliders in the browser
 5. Stop there. You'll know if this is for you.
