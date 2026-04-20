@@ -1,0 +1,118 @@
+{
+  "criteria": [
+    {
+      "key": "shipp",
+      "label": "Shippability",
+      "short": "Shipp",
+      "question": "Can we demo this today, without vaporware?",
+      "rubric": [
+        ["1", "doesn't exist in code"],
+        ["3", "works but needs setup"],
+        ["5", "demo-ready today"]
+      ]
+    },
+    {
+      "key": "icp",
+      "label": "ICP pain",
+      "short": "ICP",
+      "question": "Does this target user actually care?",
+      "rubric": [
+        ["1", "not their problem"],
+        ["3", "mild annoyance"],
+        ["5", "acute pain"]
+      ]
+    },
+    {
+      "key": "diff",
+      "label": "Differentiation",
+      "short": "Diff",
+      "question": "Different from alternatives they already have?",
+      "rubric": [
+        ["1", "everyone has this"],
+        ["3", "nuanced diff"],
+        ["5", "unique capability"]
+      ]
+    },
+    {
+      "key": "viral",
+      "label": "Virality",
+      "short": "Viral",
+      "question": "Surprise + emotional hook + shareable?",
+      "rubric": [
+        ["1", "boring, functional only"],
+        ["3", "clean story arc"],
+        ["5", "meme / oh shit moment"]
+      ]
+    },
+    {
+      "key": "rev",
+      "label": "Revenue",
+      "short": "Rev",
+      "question": "Affects the purchase decision?",
+      "rubric": [
+        ["1", "PR only"],
+        ["2", "procurement gate"],
+        ["3", "trial conversion"],
+        ["4", "core paid value"],
+        ["5", "ACV lever / expansion"]
+      ]
+    },
+    {
+      "key": "breadth",
+      "label": "Channel breadth",
+      "short": "Breadth",
+      "question": "Works on tweet + landing + demo + onboarding?",
+      "rubric": [
+        ["1", "one narrow channel"],
+        ["3", "2-3 channels"],
+        ["5", "packages everywhere"]
+      ]
+    },
+    {
+      "key": "cost",
+      "label": "Asset cost",
+      "short": "Cost",
+      "question": "Cheap to produce? (inverted — 5 = cheap)",
+      "rubric": [
+        ["1", "major product work needed"],
+        ["3", "day-two setup"],
+        ["5", "screenshot / 30-sec video today"]
+      ]
+    }
+  ],
+  "presets": {
+    "unweighted": {
+      "label": "Unweighted",
+      "weights": { "shipp": 1, "icp": 1, "diff": 1, "viral": 1, "rev": 1, "breadth": 1, "cost": 1 }
+    },
+    "hero": {
+      "label": "Landing hero",
+      "weights": { "shipp": 2, "icp": 1, "diff": 2, "viral": 1, "rev": 2, "breadth": 1, "cost": 1 }
+    },
+    "viral": {
+      "label": "Viral / demo",
+      "weights": { "shipp": 2, "icp": 1, "diff": 2, "viral": 2, "rev": 1, "breadth": 1, "cost": 1 }
+    },
+    "sales": {
+      "label": "Sales deck",
+      "weights": { "shipp": 1, "icp": 2, "diff": 2, "viral": 1, "rev": 3, "breadth": 1, "cost": 1 }
+    },
+    "icp": {
+      "label": "ICP-first",
+      "weights": { "shipp": 2, "icp": 3, "diff": 1, "viral": 1, "rev": 1, "breadth": 1, "cost": 1 }
+    },
+    "now-bias": {
+      "label": "NOW-bias",
+      "weights": { "shipp": 3, "icp": 1, "diff": 1, "viral": 1, "rev": 1, "breadth": 1, "cost": 2 }
+    },
+    "ai-era": {
+      "label": "AI era",
+      "weights": { "shipp": 0, "icp": 1, "diff": 3, "viral": 3, "rev": 3, "breadth": 1, "cost": 1 }
+    }
+  },
+  "horizons": [
+    { "key": "NOW", "label": "NOW", "desc": "demoable today" },
+    { "key": "NEXT", "label": "NEXT", "desc": "2-4 weeks of work" },
+    { "key": "FUTURE", "label": "FUTURE", "desc": "aspirational" }
+  ]
+}
