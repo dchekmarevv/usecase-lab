@@ -40,8 +40,6 @@ curl -sSL https://raw.githubusercontent.com/dchekmarevv/usecase-lab/main/install
 
 This drops eight slash commands into `.claude/commands/` and a renderer template into `.usecase-lab/templates/`. No dependencies. No `npm install`. No background daemon.
 
-To uninstall, just delete those two directories.
-
 ## See it work
 
 ```
