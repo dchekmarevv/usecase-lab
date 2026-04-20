@@ -2,7 +2,7 @@
 
 > Ideas are cheap. Prioritization is the work.
 
-In the AI era, shipping is easy. The bottleneck isn't writing code — it's figuring out **which of your 60 ideas deserves the next two weeks**. And nobody wants to build that spreadsheet by hand.
+In the AI era, shipping is easy. The bottleneck isn't writing code — it's figuring out **which of your 60 ideas around your product deserves the next two weeks**. And nobody wants to build that spreadsheet by hand.
 
 `usecase-lab` is the spreadsheet replacement. A Claude Code toolkit that turns a rough product into a scored, filterable, interactive prioritization page — without leaving your terminal.
 
