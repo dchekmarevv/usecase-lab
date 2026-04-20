@@ -42,65 +42,75 @@ This drops eight slash commands into `.claude/commands/` and a renderer template
 
 ## See it work
 
+Walking through a real session on a fictional note-taking product called "Acme Notes" (the example bundled in this repo):
+
 ```
-You:    /usecase-lab feature-ideas
+You:    /usecase-lab landing-angles
 
 Claude: Exploring your product...
-        [dispatches an Explore agent → reads README, package.json, docs/,
-         BACKLOG.md, recent git log. Returns a structured inventory.]
+        [reads README, package.json, docs/, recent commits, BACKLOG.md —
+         returns a grounded inventory of what Acme Notes actually does today.]
 
-        Inventoried 14 capabilities, 6 integrations (4 shipped, 2 mocked),
-        3 signature features. Saved to inventory.md.
+        Inventoried 14 shipped capabilities, 6 integrations, 3 signature
+        features (offline sync, AI summarization, bidirectional links).
+        Flagged 4 roadmap items as FUTURE.
 
-        Continue? [y/N]
-
-You:    y
-
-Claude: Brainstorming use cases for feature-ideas...
-        [generates 32 ideas across 7 categories, each with horizon tag
-         and honest caveats about what's real vs aspirational]
-
-        32 ideas across: Core features, AI features, Integrations,
-        Collaboration, Mobile, Enterprise, Roadmap.
-
-        Continue? [y/N]
+        Saved to inventory.md. Continue? [y/N]
 
 You:    y
 
-Claude: Framework... using defaults (7 criteria, 7 presets including AI era).
-        [shows the table — you can adjust rubrics or add/remove criteria]
+Claude: Brainstorming landing angles...
+        [generates 28 positioning stories across 6 categories — not
+         features, not roadmap items, but the ways you could *describe*
+         what you built. Each tagged NOW / NEXT / FUTURE.]
+
+        28 angles across: Hero demos (6), Comparison angles (5), Audience
+        wedges (4), Viral hooks (4), Integration stories (3), What-if
+        angles (6 — FUTURE).
+
+        Saved to ideas.md. Continue? [y/N]
+
+You:    y
+
+Claude: Framework — default 7 criteria, 7 presets including AI era.
 
 You:    Approve.
 
-Claude: Scoring 32 ideas...
-        [goes idea by idea, applying rubrics honestly]
+Claude: Scoring 28 angles...
+        [applies rubrics honestly. FUTURE angles locked to shippability ≤ 2 —
+         the framework refuses to dress aspirational pitches as demos.]
 
-        Top 5 unweighted:
-          #3  Real-time collaboration                — 29
-          #7  AI summarization on long notes         — 28
-          #1  Offline-first sync                     — 28
-          #12 Templates gallery                      — 27
-          #5  Import from Evernote                   — 26
+        Under Landing hero preset (weight today's shipped angles):
+          #3  "Your meeting notes write themselves"            — 41
+          #7  "Import your Evernote in one click"              — 39
+          #11 "Works offline, syncs when you're back"          — 38
+          #5  "Real-time collab without the Google Docs bloat" — 37
+          #12 "Templates for every meeting type"               — 35
 
-        Top 5 under AI era (diff×3, viral×3, rev×3):
-          #7  AI summarization on long notes
-          #18 Voice-to-text meeting capture
-          #3  Real-time collaboration
-          #24 "Brain-dump → organized" demo
-          #29 AI task extraction from notes (FUTURE)
+        Under AI era preset (reward angles worth building toward):
+          #24 "Your notes become your task list automatically" — FUTURE · 48
+          #7  "Your meeting notes write themselves"            —         44
+          #26 "Your second brain, on your wrist"               — FUTURE · 42
+          #18 "The note app that actually remembers"           —         41
+          #9  "Brain-dump → organized in 15 seconds"           —         40
 
         Continue? [y/N]
 
 You:    y
 
-Claude: Rendered docs/usecase-lab/feature-ideas/index.html.
-        Opening in browser...
+Claude: Rendered docs/usecase-lab/landing-angles/index.html.
+        Opening in your browser.
 
-[browser opens — live weight sliders, Top-5 cards, sortable table with 32 rows,
- filter chips by horizon and category, CSV export]
+[interactive page: 7 weight sliders, 7 preset buttons, Top-5 cards,
+ sortable table, filter chips by horizon and category, CSV export.]
 ```
 
-Five commands, end to end. You'd get a similar result from a week of Notion docs and a spreadsheet. You get it here in ~10 minutes.
+Two decisions fall out of the same page:
+
+- **For your landing today →** commit to 3–5 from the Landing hero column. They're shippable, the ICP cares, they differentiate. Hero copy writes itself: #3 becomes the hero headline, #5/#7 become the features grid, #11 becomes the trust bullet.
+- **For your "what-if" section →** angles #24 and #26. Both `FUTURE`, both score near the top under AI era. That's roadmap feeding marketing: ship those, and you unlock stories that actually cut through. Product and marketing arguing from the same page instead of parallel tracks.
+
+Five commands, ~10 minutes. Same result in Notion + a spreadsheet is usually a week of doc churn — and still ends in an argument about whose intuition is right.
 
 ## The pipeline
 
